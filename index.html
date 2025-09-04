@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <style>
+    body {
+      margin:0;
+      padding:0;
+      font-family: "Segoe UI", sans-serif;
+      color: white;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, #1e3a8a, #9333ea, #2563eb, #14b8a6);
+      background-size: 800% 800%;
+      animation: gradientMove 15s ease infinite;
+      z-index: -1;
+    }
+    @keyframes gradientMove {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    .card {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(15,23,42,0.85);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 420px;
+      margin: auto;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px #00000088;
+    }
+    .avatar {
+      width:120px; height:120px;
+      border-radius:50%;
+      border:3px solid #a78bfa;
+      object-fit:cover;
+      box-shadow:0 0 20px #a78bfa88;
+    }
+    h2 { margin: 15px 0 5px; }
+    p { margin: 0 0 20px; color:#cbd5e1; }
+
+    /* Icon links */
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 0 10px #a78bfa66;
+      transition: 0.3s all;
+    }
+    .links a:hover {
+      background: #a78bfa;
+      box-shadow: 0 0 20px #a78bfaaa;
+      transform: translateY(-5px) scale(1.1);
+    }
+    .links img {
+      width: 20px;
+      height: 20px;
+      filter: invert(1) brightness(2);
+      transition: 0.3s;
+    }
+    .links a:hover img {
+      filter: invert(1) brightness(1);
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="card">
+    <img src="anh.png" class="avatar" alt="avatar">
+    <h2>Giang Quốc Minh</h2>
+    <p>“Just a dreamer 🌌”</p>
+
+    <div class="links">
+      <a href="https://www.facebook.com/profile.php?id=61554009504451" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+      <a href="https://discord.gg/YpxhfUU9" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord"></a>
+      <a href="tiktok.com/@_minhdayne05" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"></a>
+    </div>
+  </div>
+
+  <!-- Thư viện particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 80},
+        "size": {"value": 3},
+        "move": {"speed": 2},
+        "line_linked": {"enable": true},
+        "color": {"value": "#a78bfa"}
+      }
+    });
+  </script>
+</body>
+</html>
